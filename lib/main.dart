@@ -9,28 +9,18 @@ import 'screens/dashboard_screen.dart';
 
 import 'package:intl/date_symbol_data_local.dart';
 
+import 'firebase_options.dart';
+
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   await initializeDateFormatting('id', null);
 
-  // TODO: Replace with actual configuration from flutterfire configure
-  // For now we use the web config as a placeholder, but this WILL NOT WORK for Android/iOS
-  // without registering the app in Firebase Console.
   try {
     await Firebase.initializeApp(
-      options: const FirebaseOptions(
-        apiKey: "AIzaSyDZVZC-tc3MsYNONS-zVT9H4Qa9q8YD054",
-        appId:
-            "1:253718284138:web:a2e8e024c6122f9c998713", // NOTE: This is WEB App ID. You need Android App ID.
-        messagingSenderId: "253718284138",
-        projectId: "kasir-pro-a9442",
-        storageBucket: "kasir-pro-a9442.firebasestorage.app",
-      ),
+      options: DefaultFirebaseOptions.currentPlatform,
     );
   } catch (e) {
-    print(
-      "Firebase initialization failed (expected if not configured for mobile): $e",
-    );
+    print("Firebase initialization failed: $e");
   }
 
   runApp(const MyApp());
