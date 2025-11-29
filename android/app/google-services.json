@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "253718284138",
+    "project_id": "kasir-pro-a9442",
+    "storage_bucket": "kasir-pro-a9442.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:253718284138:android:297e4016281ed85c998713",
+        "android_client_info": {
+          "package_name": "com.kasirpro.kasir_pro_mobile"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxuuYKT5C27R6ZFh5M-eT_B-0i-OzR7aI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
